@@ -12,6 +12,14 @@ return menuItem = {
 
 };
 
+function addIngredients(toppings, ingredientList) {
+  if (!ingredientList.includes(toppings)) {
+  return ingredientList.push(toppings);
+  }
+};
+
+
+
 
 
 
@@ -19,7 +27,7 @@ return menuItem = {
 module.exports = {
   nameMenuItem,
   createMenuItem,
-  // addIngredients,
+  addIngredients,
   // formatPrice,
   // decreasePrice,
   // createRecipe
