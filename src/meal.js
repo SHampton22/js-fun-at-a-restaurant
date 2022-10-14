@@ -3,11 +3,11 @@ function nameMenuItem(menuItemName) {
   return `Delicious ${menuItemName}`
 };
 
-function createMenuItem() {
+function createMenuItem(name, price, food)  {
 return menuItem = {
-  name: "Delicious French Toast",
-  price: 10.99,
-  type: "breakfast"
+  name: name,
+  price: price,
+  type: food
 };
 
 };
@@ -19,8 +19,26 @@ function addIngredients(toppings, ingredientList) {
 };
 
 
+function formatPrice(basicNumber) {
+//when an argument is passed the $ is added to the front
+//for every price in the menuItem, add $ to the front.
+var newPrice = `$${basicNumber}`;
+return newPrice;
+  
+};
 
+function decreasePrice(newPrice) {
+  return newPrice *= 1 - .10
 
+};
+
+function createRecipe(recipeTitle, recipeIngredients, mealType) {
+return recipe = {
+  title: recipeTitle,
+  ingredients: recipeIngredients,
+  type: mealType
+}
+};
 
 
 
@@ -28,9 +46,9 @@ module.exports = {
   nameMenuItem,
   createMenuItem,
   addIngredients,
-  // formatPrice,
-  // decreasePrice,
-  // createRecipe
+  formatPrice,
+  decreasePrice,
+  createRecipe
 }
 
 
